@@ -30,11 +30,16 @@ input[type="submit"] {
 }
 
 @media only screen and (max-width: 600px) {
-  .title {
-    display: none;
+  main {
+    width: 80%;
+    padding: 10%;
   }
 
   header {
     padding: 1em 5%;
+  }
+
+  .title {
+    display: none;
   }
 }
