@@ -1,11 +1,13 @@
+'use strict';
+
 const STORE = [
   {
     question: 'Which of these things did Kanye West NOT say?',
     answer: [
-      'Why you so paranoid? Don\’t be so paranoid.', 
+      'Why you so paranoid? Don\'t be so paranoid.', 
       'On the bathroom wall I wrote \'I\'d rather argue with you than be with someone else.',
       'I know I act a fool but I promise you I’m going back to school.',
-      'Slavery wasn\’t a choice.'
+      'Slavery wasn\'t a choice.'
     ],
     validAnswer:'Slavery wasn\'t a choice'
   },
@@ -30,7 +32,7 @@ const STORE = [
     validAnswer:'Maroon 5, Travis Scott, Big Boi'
   },
   {
-    question: 'J. Cole\'s track, \"1985\", off K.O.D is a negative commentary on the popularization of trap and mumble rap aimed specifically at which of these newer artists?',
+    question: 'J. Cole\'s track, "1985", off K.O.D is a negative commentary on the popularization of trap and mumble rap aimed specifically at which of these newer artists?',
     answer: [
       'Lil Uzi Vert',
       'Lil Yachty',
@@ -44,18 +46,18 @@ const STORE = [
     answer: [
 	'Meechy Darko, Zombie Juice, Erick the Architect',
  	'Tyler The Creator, Earl Sweatshirt, Taco',
-	'Action Bronson, Chance The Rapper, Danny Brown,
+	'Action Bronson, Chance The Rapper, Danny Brown',
 	'Quavo, Offset, Takeoff'
 	],
     validAnswer:'Quavo, Offset, Takeoff'
   },
   {
-    question: 'The Pulitzer Prize in Music was awarded for the first time in history in a genre outside classical or jazz to which of these artists?'
+    question: 'The Pulitzer Prize in Music was awarded for the first time in history in a genre outside classical or jazz to which of these artists?',
     answer: [
 	'Jay-Z',
 	'Tupac',
 	'Dr. Dre',
-	'Kendrick Lamar
+	'Kendrick Lamar'
     ],
     validAnswer: 'Kendrick Lamar'
   },
@@ -69,7 +71,7 @@ const STORE = [
 	'This a thousand dollar pair of shoes, you don\’t even know it',
 	'Put Molly all in her champagne, she ain\'t even know it'
    ],
-    validAnswer:'Put Molly all in her champagne, she ain\'t even know it
+    validAnswer:'Put Molly all in her champagne, she ain\'t even know it'
   },
   {
     question:'Which of these expressions is DJ Khaled\’s most prominent catch phrase?',
@@ -82,7 +84,7 @@ const STORE = [
     validAnswer:'All of the options are heavily repeated.'
   },
   {
-    question: 'Which of these celebrities has not dated Drake?'
+    question: 'Which of these celebrities has not dated Drake?',
     answer: [
 	'Bella Hadid',
 	'Rihanna',
