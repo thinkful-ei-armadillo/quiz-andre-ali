@@ -1,0 +1,21 @@
+main {
+  width: 45%;
+  margin: 5em auto 0 auto;
+  max-width: 50em;
+  min-width: 30em;
+}
+
+header { margin-bottom: 4em }
+
+label {
+  display: block;
+}
+
+.startPage { text-align: center }
+.title { text-align: center }
+
+.questionNum,
+.pointsNum {
+  margin-left: 2em;
+  float: right;
+}

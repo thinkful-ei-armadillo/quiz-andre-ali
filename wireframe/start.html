@@ -4,22 +4,28 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+
   <title>The Culture Quiz</title>
 </head>
+
 <body>
-  <main>
-    <header>
+  <main role="main">
+    <header role="header">
       <span><img src="" alt="logo"></span>
-      <span>Question 0/10</span>
-      <span>Points 0</span>
+      <span class="title">The Culture Quiz</span>
+      <span class="pointsNum">Points 0</span>
+      <span class="questionNum">Question 0/10</span>
     </header>
 
     <!-- our template function can write to this article tag -->
     <article class="content">
-      <h1>The Culture Quiz</h1>
-      <p>This is just a wireframe. It will hopefully look better later.</p>
-
-      <button type="button">Start quiz</button>
+      <div class="startPage">
+        <h1>How well do you know the culture?</h1>
+        <p class="startText">This is just a wireframe. It will hopefully look better later.</p>
+  
+        <button type="button" id="quizStartBtn">Find out</button>
+      </div>
     </article>
   </main>
 </body>
