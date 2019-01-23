@@ -52,13 +52,13 @@ function generateQuestion(num) {
 
     answerHtml += `
       <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE[num].answer[index]}" required>
+        <input type="radio" name="answer" value="${STORE[num].answer[index]}" class="answerInput" required>
         <span>${STORE[num].answer[index]}</span>
       </label>`;
   }
 
   return `
-    <h3>${STORE[num].question}</h3>
+    <h2>${STORE[num].question}</h2>
     <form id="multipleChoice">
       ${answerHtml}
       <input type="submit" value="Submit answer">
@@ -76,8 +76,6 @@ function renderQuestion() {
 function startQuiz() {
   $('.questionContent').removeClass('hidden');
   $('.startPage').addClass('hidden');
-  
-  
 
   renderQuestion();
   
@@ -133,6 +131,12 @@ function handleRestart() {
    restartQuiz();
   })
 }
+
+/*function handleAnswerSelect() {
+  $('.answerOption').on('click', '.answerInput', event => {
+    event.currentTarget
+  });
+}*/
 
 
 function main() {
