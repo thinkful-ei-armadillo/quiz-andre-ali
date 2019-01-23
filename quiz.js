@@ -74,11 +74,21 @@ function renderQuestion() {
 
 
 function startQuiz() {
+  $('.questionContent').removeClass('hidden');
   $('.startPage').addClass('hidden');
+  
+  
 
   renderQuestion();
+  
 }
 
+function restartQuiz() {
+  $('.startPage').removeClass('hidden');
+  $('.resultsPage').addClass('hidden');
+  questionNumber = -1;
+  points = 0;
+}
 
 function handleStartQuiz() {
   $('#quizStartBtn').click(() => {
@@ -107,7 +117,21 @@ function handleNextQuestion() {
 }
 
 function handleShowResults() {
-  //
+  $('.questionContent').on('click', '#lastOne', event => {
+    $('.resultsPage').removeClass('hidden');
+    $('.questionContent').addClass('hidden');
+    if (points === 1) {
+    $('#finalScore').text(`${points} point`);
+    } else {
+    $('#finalScore').text(`${points} points`);
+    }
+  });
+}
+
+function handleRestart() {
+  $('.resultsPage').on('click', '#quizRestart', event => {
+   restartQuiz();
+  })
 }
 
 function main() {
@@ -115,6 +139,8 @@ function main() {
   handleQuestionForm();
   handleAnswer();
   handleNextQuestion();
+  handleShowResults();
+  handleRestart();
 }
 
 $(main);
