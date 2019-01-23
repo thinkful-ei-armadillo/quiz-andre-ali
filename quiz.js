@@ -26,7 +26,12 @@ function renderFeedback(isCorrect) {
     html = `<h3>WRONG! The correct answer was: ${correctAnswer}</h3>`;
   }
 
-  html += `<button type="button" id="nextOne">Go to next question</button>`;
+  $('#pointsNumTotal').text(questionNumber + 1);
+  if(questionNumber === STORE.length - 1) {
+    html += '<button type="button" id="lastOne">See results</button>';
+  } else {
+    html += '<button type="button" id="nextOne">Go to next question</button>';
+  }
 
   $('.questionContent').html(html);
 }
@@ -99,6 +104,10 @@ function handleNextQuestion() {
   $('.questionContent').on('click', '#nextOne', event => {
     renderQuestion();
   });
+}
+
+function handleShowResults() {
+  //
 }
 
 function main() {
