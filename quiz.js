@@ -20,10 +20,10 @@ function renderFeedback(isCorrect) {
     points++;
     $('#pointsNum').text(points);
 
-    html = `<h3>You guessed it!</h3>`;
+    html = `<h3>You guessed it!</h3><img src="${STORE[questionNumber].correctGif}" alt="${STORE[questionNumber].correctAlt}">`;
   } else {
     let correctAnswer = STORE[questionNumber].validAnswer;
-    html = `<h3>WRONG! The correct answer was: ${correctAnswer}</h3>`;
+    html = `<h3>WRONG! The correct answer was: ${correctAnswer}</h3><img src="${STORE[questionNumber].incorrectGif}" alt="${STORE[questionNumber].incorrectAlt}">`;
   }
 
   $('#pointsNumTotal').text(questionNumber + 1);
@@ -133,6 +133,7 @@ function handleRestart() {
    restartQuiz();
   })
 }
+
 
 function main() {
   handleStartQuiz();
