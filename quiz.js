@@ -5,7 +5,7 @@ let points = 0;
 
 
 function evaluateAnswer() {
-  const selectedAnswer = $('input[name="answer"]:checked').val()
+  const selectedAnswer = $('input[name="answer"]:checked').val();
   if (selectedAnswer === STORE[questionNumber].validAnswer) {
     renderFeedback(true);
   } else {
@@ -13,16 +13,24 @@ function evaluateAnswer() {
   }
 }
 
-function renderFeedback() {
-  if (true) {
+function renderFeedback(isCorrect) {
+  let html = '';
+
+  if (isCorrect) {
     points++;
-    const html = $(.questionContent).html();
-    
-  } else if (false) {
-    correctAnswer = STORE[questionNumber].validAnswer;
-    //${correctAnswer}
+    $('#pointsNum').text(points);
+
+    html = `<h3>You guessed it!</h3>`;
+  } else {
+    let correctAnswer = STORE[questionNumber].validAnswer;
+    html = `<h3>WRONG! The correct answer was: ${correctAnswer}</h3>`;
   }
-  }
+
+  html += `<button type="button">Go to next question</button>`;
+
+  $('.questionContent').html(html);
+}
+
   /*if (
   questionNumber++;
   $('.questionNumber').text(questionNumber + 1);
@@ -30,7 +38,7 @@ function renderFeedback() {
 function handleAnswer() {
   $('.questionContent').on('submit', '#multipleChoice', event => { 
     event.preventDefault();
-    evaluateAnswer()
+    evaluateAnswer();
   });
 }
 
@@ -61,14 +69,14 @@ function generateQuestion(num) {
 }
 
 function renderQuestion() {
-  let html = generateQuestion(questionNumber);
+  $('#questionNum').text(questionNumber + 2);
+  let html = generateQuestion(++questionNumber);
 
   $('.questionContent').html(html);
 }
 
 
 function startQuiz() {
-  questionNumber = 0;
   $('.startPage').addClass('hidden');
 
   renderQuestion();
