@@ -44,26 +44,23 @@ function handleAnswer() {
 
 
 function generateQuestion(num) {
+  let roulette = [0, 1, 2, 3];
+  let answerHtml = '';
+
+  for(let i = 0; i < STORE[num].answer.length; i++) {
+    let index = roulette.splice(Math.floor(Math.random() * roulette.length), 1);
+
+    answerHtml += `
+      <label class="answerOption">
+        <input type="radio" name="answer" value="${STORE[num].answer[index]}" required>
+        <span>${STORE[num].answer[index]}</span>
+      </label>`;
+  }
+
   return `
     <h3>${STORE[num].question}</h3>
     <form id="multipleChoice">
-      <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE[num].answer[0]}" required>
-        <span>${STORE[num].answer[0]}</span>
-      </label>
-      <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE[num].answer[1]}" required>
-        <span>${STORE[num].answer[1]}</span>
-      </label>
-      <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE[num].answer[2]}" required>
-        <span>${STORE[num].answer[2]}</span>
-      </label>
-      <label class="answerOption">
-        <input type="radio" name="answer" value="${STORE[num].answer[3]}" required>
-        <span>${STORE[num].answer[3]}</span>
-      </label>
-
+      ${answerHtml}
       <input type="submit" value="Submit answer">
     </form>`;
 }
