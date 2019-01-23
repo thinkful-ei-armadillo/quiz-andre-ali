@@ -26,7 +26,7 @@ function renderFeedback(isCorrect) {
     html = `<h3>WRONG! The correct answer was: ${correctAnswer}</h3>`;
   }
 
-  html += `<button type="button">Go to next question</button>`;
+  html += `<button type="button" id="nextOne">Go to next question</button>`;
 
   $('.questionContent').html(html);
 }
@@ -35,12 +35,7 @@ function renderFeedback(isCorrect) {
   questionNumber++;
   $('.questionNumber').text(questionNumber + 1);
   }*/
-function handleAnswer() {
-  $('.questionContent').on('submit', '#multipleChoice', event => { 
-    event.preventDefault();
-    evaluateAnswer();
-  });
-}
+
 
 
 function generateQuestion(num) {
@@ -96,10 +91,24 @@ function handleQuestionForm() {
   }); 
 }
 
+function handleAnswer() {
+  $('.questionContent').on('submit', '#multipleChoice', event => { 
+    event.preventDefault();
+    evaluateAnswer();
+  });
+}
+
+function handleNextQuestion() {
+  $('.questionContent').on('click', '#nextOne', event => {
+    renderQuestion();
+  });
+}
+
 function main() {
   handleStartQuiz();
   handleQuestionForm();
   handleAnswer();
+  handleNextQuestion();
 }
 
 $(main);
