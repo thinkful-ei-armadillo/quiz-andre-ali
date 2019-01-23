@@ -9,7 +9,7 @@ const STORE = [
       'I know I act a fool but I promise you I’m going back to school.',
       'Slavery wasn\'t a choice.'
     ],
-    validAnswer:'Slavery wasn\'t a choice'
+    validAnswer:'Slavery wasn\'t a choice.'
   },
   {
     question: 'On Pusha T\'s 2018 album, DAYTONA, which of the following songs was the designated diss track towards Drake for allegedly using ghost writers?',
