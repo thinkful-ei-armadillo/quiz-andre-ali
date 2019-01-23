@@ -6,8 +6,8 @@ const STORE = [
     answer: [
       'Why you so paranoid? Don\'t be so paranoid.', 
       'On the bathroom wall I wrote \'I\'d rather argue with you than be with someone else.',
-      'I know I act a fool but I promise you I’m going back to school.',
-      'Slavery wasn\'t a choice.'
+      'Slavery wasn\'t a choice.',
+      'I know I act a fool but I promise you I’m going back to school.'
     ],
     validAnswer:'Slavery wasn\'t a choice.'
   },
@@ -25,9 +25,9 @@ const STORE = [
     question: 'Which musical acts will perform at the 2019 Super Bowl halftime show?',
     answer: [
       'Drake, Janelle Monae, Dua Lipa',
+      'Maroon 5, Travis Scott, Big Boi',
       'Ariana Grande, Kodak Black, Young Thug',
-      'Imagine Dragons, The Weeknd, Khalid',
-      'Maroon 5, Travis Scott, Big Boi'
+      'Imagine Dragons, The Weeknd, Khalid'
     ],
     validAnswer:'Maroon 5, Travis Scott, Big Boi'
   },
@@ -44,10 +44,10 @@ const STORE = [
   {
     question: 'The American hip hop trio, Migos, is composed of which three rappers?',
     answer: [
-	'Meechy Darko, Zombie Juice, Erick the Architect',
- 	'Tyler The Creator, Earl Sweatshirt, Taco',
-	'Action Bronson, Chance The Rapper, Danny Brown',
-	'Quavo, Offset, Takeoff'
+      'Quavo, Offset, Takeoff',
+	    'Meechy Darko, Zombie Juice, Erick the Architect',
+ 	    'Tyler The Creator, Earl Sweatshirt, Taco',
+	    'Action Bronson, Chance The Rapper, Danny Brown'
 	],
     validAnswer:'Quavo, Offset, Takeoff'
   },
@@ -55,9 +55,10 @@ const STORE = [
     question: 'The Pulitzer Prize in Music was awarded for the first time in history in a genre outside classical or jazz to which of these artists?',
     answer: [
 	'Jay-Z',
-	'Tupac',
-	'Dr. Dre',
-	'Kendrick Lamar'
+  'Tupac',
+  'Kendrick Lamar',
+	'Dr. Dre'
+	
     ],
     validAnswer: 'Kendrick Lamar'
   },
@@ -79,27 +80,28 @@ const STORE = [
 	'Another One',
 	'DJ KHALED!',
 	'We the best music',
-	'All of the above options are repeated heavily'
+	'All of the options are heavily repeated.'
      ],
     validAnswer:'All of the options are heavily repeated.'
   },
   {
     question: 'Which of these celebrities has not dated Drake?',
     answer: [
-	'Bella Hadid',
-	'Rihanna',
-	'Jennifer Lopez',
-	'Amber Rose'
+      'Amber Rose',
+	    'Bella Hadid',
+	    'Rihanna',
+	    'Jennifer Lopez'
   ],
     validAnswer: 'Amber Rose'
  },
  {
     question: 'Which 2018 motion picture soundtrack was composed by Kendrick Lamar',
     answer: [
-	'BlackKkKlansman',
+  'BlackKkKlansman',
+  'Black Panther',
 	'Venom',
-	'Isle of Dogs',
-	'Black Panther'
+	'Isle of Dogs'
+	
   ],
     validAnswer: 'Black Panther'
   } ];
